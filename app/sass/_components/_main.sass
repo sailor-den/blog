@@ -1,119 +1,316 @@
-.main
-    background-image: url(../img/ban.jpg)
-    background-size: cover
-    width: 100%
-    height: 100vh
+// .main
+//     width: 100%
+//     height: 100vh
+//     position: relative
+//     &:after 
+//         content: ''
+//         width: 100%
+//         height: 100%
+//         left: 0
+//         z-index: -1
+//         opacity: .85
+//         position: absolute
+//     &__title
+//         font-size: 24px
+//         line-height: 28px
+//         color: #ffffff
+//         font-weight: 400
+//     &__hello
+//         color: #ffffff
+//         line-height: 51px
+//     &__content
+//         padding: 0 60px
+//         vertical-align: middle
+//         height: 100%
+//         width: 100%
+
+// .logo
+//     &__link
+//         color: orange
+//         margin-left: 30px
+//         border: 1px solid #ffffff
+//         background: #ffffff
+//         font-size: 30px
+//         &:hover 
+//             text-decoration: none
+
+// .full-menu
+//     position: fixed
+//     top: 0
+//     left: 0
+//     z-index: 3
+//     height: 100%
+//     width: 100%
+//     overflow: hidden
+//     background-size: cover 
+//     opacity: 0
+//     visibility: hidden 
+//     transition: opacity 0.3s, visibility 0s 0.3s
+
+// .modal-close
+//     position: absolute
+//     z-index: 1
+//     top: 0
+//     right: 0
+//     padding: 50px
+//     height: 45px
+//     width: 45px
+//     border-radius: 50%
+//     background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center
+//     overflow: hidden
+//     text-indent: 100%
+//     white-space: nowrap
+//     visibility: hidden
+//     opacity: 0
+//     transform: scale(0)
+//     visibility: 0s 0.3s, opacity 0.3s 0s
+//     transition: transform 0.3s 0s
+//     visibility: 0s 0.3s, opacity 0.3s 0s
+//     &:hover 
+//         background-color: rgba(0,0,0,0.5)
+
+// .full-menu.visible 
+//     background-size: 100%
+//     opacity: 1
+//     visibility: visible
+//     fransition: opacity 0.7s, visibility 0s 
+
+// .full-menu.visible .full-menu__content
+//     -webkit-overflow-scrolling: touch
+
+// .full-menu.visible .modal-close
+//     visibility: visible
+//     opacity: 1
+//     transition: transform 0.3s 0s, visibility 0s, opacity 0.3s 0s
+//     transform: scale(1)
+
+
+//     @media only screen and (min-width: 1100px)
+//         .full-menu__content
+//             padding: 6em 5%
+//         .full-menu .modal-close
+//             height: 60px
+//             width: 60px
+//         .full-menu p 
+//             font-size: 25px
+//         .cd-transition-layer
+//             position: fixed
+//             top: 0
+//             left: 0
+//             z-index: 2
+//             height: 100%
+//             width: 100%
+//             opacity: 0
+//             visibility: hidden
+//             overflow: hidden
+//         .cd-transition-layer .bg-layer
+//             position: absolute
+//             left: 50%
+//             top: 50%
+//             transform: translateY(-50%) translateX(-2%)
+//             height: 100%
+//             width: 2500%
+//             background-color: url(../img/ink.png) no-repeat 0 
+//             background-size: 100% 100%
+
+
+.header
+    padding-top: 40px
+    display: flex
+    justify-content: space-between
+
+.logo
+    &__link
+        font-size: 30px
+        color: orange
+        background: #ffffff
+        border: 1px solid #ffffff
+        &:hover
+            text-decoration: none
+
+.nav-icon
+    width: 26px
+    height: 21px
+    transition: .5s ease-in-out
+    cursor: pointer
     position: relative
-    &:after 
-        content: ''
+    &__item
+        display: block
+        height: 2px
         width: 100%
-        height: 100%
-        left: 0
-        z-index: -1
-        opacity: .85
-        position: absolute
+        background-color: #fff
+        transition: .25s ease-in-out
+        margin-bottom: 6px
+        &:last-child
+            width: 60%
+            margin-bottom: 0
+            position: absolute
+            right: 0
+            
+.nav-icon:hover .nav-icon__item:last-child
+    width: 100%
+
+
+.main
+    padding-top: 230px
+    &__hello
+        display: block
+        color: #ffffff
+        margin-bottom: 15px
     &__title
         font-size: 24px
         line-height: 28px
         color: #ffffff
         font-weight: 400
-    &__hello
-        color: #ffffff
-        line-height: 51px
-    &__content
-        padding: 0 60px
-        vertical-align: middle
+        +r-c 
+
+.social
+    &__list 
+        margin-top: 30px
+    &__link
+        display: inline-block
+        width: 15px
+        margin-right: 20px
+        &:last-child
+            margin-right: 0
+        &:hover
+            opacity: .6
+            transition: all ease 0.3s
+
+.modal
+    &-close 
+        position: absolute
+        z-index: 1
+        top: 0
+        right: 54px
+        padding: 50px
+        border-radius: 50%
+        background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center
+        overflow: hidden
+        margin-right: 5px
+        text-indent: 100%
+        white-space: nowrap
+        // visibility: hidden
+        // opacity: 0    
+        // transform: scale(0)
+        // visibility: 0s 0.3s, opacity 0.3s 0s
+        // transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s
+    &-menu
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 3
         height: 100%
         width: 100%
+        overflow: hidden
+        background-size: cover 
+        opacity: 0
+        visibility: hidden 
+        transition: opacity 0.3s, visibility 0s 0.3s
+        &__content
+            padding: 6rem 5%
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+        &__list
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__item 
+            margin-bottom: 15px
+        &__link
+            color: #ffffff
+            font-size: 26px
+            font-weight: 400
 
-.logo
-    &__link
-        color: orange
-        margin-left: 30px
-        border: 1px solid #ffffff
-        background: #ffffff
-        font-size: 30px
-        &:hover 
-            text-decoration: none
+.no-touch .modal-menu .modal-close:hover 
+    background-color: rgba(0, 0, 0, 0.5)
 
-.full-menu
-    position: fixed
-    top: 0
-    left: 0
-    z-index: 3
-    height: 100%
-    width: 100%
-    overflow: hidden
-    background-size: cover 
-    opacity: 0
-    visibility: hidden 
-    transition: opacity 0.3s, visibility 0s 0.3s
-
-.modal-close
-    position: absolute
-    z-index: 1
-    top: 0
-    right: 0
-    padding: 50px
-    height: 45px
-    width: 45px
-    border-radius: 50%
-    background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center
-    overflow: hidden
-    text-indent: 100%
-    white-space: nowrap
-    visibility: hidden
-    opacity: 0
-    transform: scale(0)
-    visibility: 0s 0.3s, opacity 0.3s 0s
-    transition: transform 0.3s 0s
-    visibility: 0s 0.3s, opacity 0.3s 0s
-    &:hover 
-        background-color: rgba(0,0,0,0.5)
-
-.full-menu.visible 
-    background-size: 100%
-    opacity: 1
-    visibility: visible
-    fransition: opacity 0.7s, visibility 0s 
-
-.full-menu.visible .full-menu__content
+.modal-menu.visible .modal-menu__content
     -webkit-overflow-scrolling: touch
 
-.full-menu.visible .modal-close
+.full-menu.visible .modal-close 
     visibility: visible
-    opacity: 1
-    transition: transform 0.3s 0s, visibility 0s, opacity 0.3s 0s
+    opacity: 1    
+    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s     
     transform: scale(1)
 
 
-    @media only screen and (min-width: 1100px)
-        .full-menu__content
-            padding: 6em 5%
-        .full-menu .modal-close
-            height: 60px
-            width: 60px
-        .full-menu p 
-            font-size: 25px
-        .cd-transition-layer
-            position: fixed
-            top: 0
-            left: 0
-            z-index: 2
-            height: 100%
-            width: 100%
-            opacity: 0
-            visibility: hidden
-            overflow: hidden
-        .cd-transition-layer .bg-layer
-            position: absolute
-            left: 50%
-            top: 50%
-            transform: translateY(-50%) translateX(-2%)
-            height: 100%
-            width: 2500%
-            background-color: url(../img/ink.png) no-repeat 0 
-            background-size: 100% 100%
+.modal-menu.visible
+    background-size: 100%
+    opacity: 1
+    visibility: visible
+    transition: opacity 0.7s, visibility 0s
 
 
 
+.cd-transition-layer 
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2
+    height: 100%
+    width: 100%
+    opacity: 0
+    visibility: hidden
+    overflow: hidden
+
+
+.cd-transition-layer .bg-layer 
+    position: absolute
+    left: 50%
+    top: 50%
+    -webkit-transform: translateY(-50%) translateX(-2%)   
+    transform: translateY(-50%) translateX(-2%)     
+    height: 100%
+    /* our sprite is composed of 25 frames */
+    width: 2500%
+    background: url(../img/ink.png) no-repeat 0 0
+    background-size: 100% 100%
+
+
+.cd-transition-layer.visible 
+    opacity: 1
+    visibility: visible
+    // background-color: red
+
+
+.cd-transition-layer.opening .bg-layer      
+    animation: cd-sequence 1.0s steps(24)     
+    animation-fill-mode: forwards
+
+
+.cd-transition-layer.closing .bg-layer      
+    animation: cd-sequence-reverse 1.0s steps(24)  
+    animation-fill-mode: forwards
+
+
+.no-cssanimations .cd-transition-layer 
+    display: none
+
+
+
+
+@keyframes cd-sequence 
+    0% 
+        transform: translateY(-50%) translateX(-2%)
+    
+    100%       
+        transform: translateY(-50%) translateX(-98%)
+    
+
+    
+    
+  
+@keyframes cd-sequence-reverse 
+    0% 
+         
+        transform: translateY(-50%) translateX(-98%)
+    
+    100% 
+         
+        transform: translateY(-50%) translateX(-2%)
+    
