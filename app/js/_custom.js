@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    // FADE OUT EFFECT WHEN CLICK A LINK
+    $(document).on("click", "a:not(.lightbox)", function () {
+        var newUrl = $(this).attr("href");
+        if (!newUrl || newUrl[0] === "#") {
+            location.hash = newUrl;
+            return;
+        }
+        $("html").fadeOut(function () {
+            location = newUrl;
+        });
+        return false;
+    });
+
     function smokeeffect () { 
         var modalTrigger = $('.nav-icon'),
             transitionLayer = $('.cd-transition-layer'),
