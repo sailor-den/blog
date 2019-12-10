@@ -75,7 +75,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     
     }
-    smokeeffect()
+    smokeeffect();
+
+   
 
 
 });
+
+
+// $(function glitchEffect(){
+//     $glitch = $('.glitch');
+//     var x = (Math.random() * 200);
+//     var y = (Math.random() * 200);
+
+//     $glitch.css({
+//         'left' : x + 'px',
+//         'top' : y + 'px',
+//     }).appendTo('section').fadeOut(200, function(){
+//         $(this).remove();
+//         glitchEffect();
+//     });
+
+// })();
+
