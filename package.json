@@ -27,6 +27,7 @@
 	},
 	"dependencies": {
 		"jquery.maskedinput": "^1.4.1",
+		"pagepiling.js": "^1.5.6",
 		"slick-carousel": "^1.8.1",
 		"slick-slider": "^1.8.2",
 		"zurb-twentytwenty": "^0.1.1"

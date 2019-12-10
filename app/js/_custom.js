@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
             resize = false;
     
         //set transitionBackground dimentions
-        setLayerDimensions();
-        $(window).on('resize', function(){
-            if( !resize ) {
-                resize = true;
-                (!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
-            }
-        });
+        // setLayerDimensions();
+        // $(window).on('resize', function(){
+        //     if( !resize ) {
+        //         resize = true;
+        //         (!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
+        //     }
+        // });
     
         //open modal window
         modalTrigger.on('click', function(event){   
@@ -53,26 +53,26 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     
-        function setLayerDimensions() {
-            var windowWidth = $(window).width(),
-                windowHeight = $(window).height(),
-                layerHeight, layerWidth;
+        // function setLayerDimensions() {
+        //     var windowWidth = $(window).width(),
+        //         windowHeight = $(window).height(),
+        //         layerHeight, layerWidth;
     
-            if( windowWidth/windowHeight > frameProportion ) {
-                layerWidth = windowWidth;
-                layerHeight = layerWidth/frameProportion;
-            } else {
-                layerHeight = windowHeight*1.2;
-                layerWidth = layerHeight*frameProportion;
-            }
+        //     if( windowWidth/windowHeight > frameProportion ) {
+        //         layerWidth = windowWidth;
+        //         layerHeight = layerWidth/frameProportion;
+        //     } else {
+        //         layerHeight = windowHeight*1.2;
+        //         layerWidth = layerHeight*frameProportion;
+        //     }
     
-            transitionBackground.css({
-                'width': layerWidth*frames+'px',
-                'height': layerHeight+'px',
-            });
+        //     transitionBackground.css({
+        //         'width': layerWidth*frames+'px',
+        //         'height': layerHeight+'px',
+        //     });
     
-            resize = false;
-        }
+        //     resize = false;
+        // }
     
     }
     smokeeffect();
@@ -98,3 +98,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // })();
 
+$(document).ready(function(){
+    $('#pagepiling').pagepiling({
+        navigation: {
+            'textColor': '#fff',
+            'bulletsColor': '#fff',
+            'position': 'right',
+            'tooltips': ['Norvay', 'Switzerland', 'Austria', 'Italy']
+        },
+    });
+});

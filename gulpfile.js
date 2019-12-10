@@ -43,6 +43,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		// 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // Custom script 
+		'node_modules/pagepiling.js/dist/jquery.pagepiling.min.js', // Custom script 
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
