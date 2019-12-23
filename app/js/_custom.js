@@ -83,28 +83,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// $(function glitchEffect(){
-//     $glitch = $('.glitch');
-//     var x = (Math.random() * 200);
-//     var y = (Math.random() * 200);
 
-//     $glitch.css({
-//         'left' : x + 'px',
-//         'top' : y + 'px',
-//     }).appendTo('section').fadeOut(200, function(){
-//         $(this).remove();
-//         glitchEffect();
-//     });
-
-// })();
-
-$(document).ready(function(){
-    $('#pagepiling').pagepiling({
-        navigation: {
-            'textColor': '#fff',
-            'bulletsColor': '#fff',
-            'position': 'right',
-            'tooltips': ['Norvay', 'Switzerland', 'Austria', 'Italy']
-        },
-    });
-});
